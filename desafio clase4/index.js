@@ -2,7 +2,7 @@ const fs = require('fs');
 
 class Contenedor {
     constructor(filename) {
-        this.filename = filename ?? 'data.json';
+        this.filename = filename ?? 'productos.json';
         fs.writeFileSync(this.filename, '[]');
     }
 
