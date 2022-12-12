@@ -22,11 +22,11 @@ app.engine(
 app.set('views', './views');
 app.set('view engine', 'hbs');
 
-app.get('/', async (req, res) => {
+app.get('/', async (req, res, next) => {
     res.render('post')
 });
 
-app.get('/productos', async (req, res) => {
+app.get('/productos', async (req, res, next) => {
     res.render('list', { productos: await products.getAll() });
 });
 

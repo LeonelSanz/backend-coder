@@ -1,0 +1,22 @@
+{{#if products.length}}
+    <div class="table-responsive">
+        <table class="table table-secondary table-stripped">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+            </tr>
+            {{#each products}}
+            <tr scope="row">
+                <td class="fs-5 text-uppercase">{{title}}</td>
+                <td class="fs-5">{{price}}</td>
+                <td>
+                    <img src={{thumbnail}} alt="product" height="100px"> 
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+{{else}}
+    <p class="alert alert-secondary mx-auto rounded-3"><b>No hay productos</b></p>
+{{/if}}

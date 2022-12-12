@@ -1,59 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
-    <title>Listado de productos</title>
-    <style>
-      body { font-family: 'Outfit', Helvetica, sans-serif; }
-      h1 { text-align: center; }
+<h1>Agregar nuevo producto</h1>
+<form action="/productos" method="post">
+  <label for="title">{{titulo}}</label>
+  <input type="text" name="title" id="title" required>
 
-      form {
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        margin: 0 auto;
-      }
+  <label for="price">{{precio}}</label>
+  <input type="number" name="price" id="price" required>
 
-      form input {
-        margin: 10px 0;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
+  <label for="thumbnail">{{Imagen}}</label>
+  <input type="text" name="thumbnail" id="thumbnail" required>
 
-      form button {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #ccc;
-        cursor: pointer;
-      }
-
-      form button:hover {
-        background-color: #aaa;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Agregar nuevo producto</h1>
-    <form action="/productos" method="post">
-      <label for="title">{{titulo}}</label>
-      <input type="text" name="title" id="title" required>
-
-      <label for="price">{{precio}}</label>
-      <input type="number" name="price" id="price" required>
-      
-      <label for="thumbnail">{{Imagen}}</label>
-      <input type="text" name="thumbnail" id="thumbnail" required>
-      
-      <button type="submit">Agregar producto</button>
-    </form>
-    <a href="/productos"><button class="btn btn-outline-secondary w-100 mt-3">VER PRODUCTOS</button></a>
-</body>
-</html>
+  <button type="submit">Agregar producto</button>
+</form>
+<a href="/productos"><button class="btn btn-outline-secondary w-100 mt-3">VER PRODUCTOS</button></a>
