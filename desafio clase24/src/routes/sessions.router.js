@@ -21,7 +21,7 @@ router.post('/register',async(req,res)=>{
 router.post('/login', async (req,res) => {
     const {email, password} = req.body;
     if(!email || !password) return res.status(400).send({status:"error", error:"Valores incompletos"});
-    const user = usersServices.getBy({email, password});
+    const user = await usersServices.getBy({email, password});
     if(!user) return res.status(400).send({status:"error", error:"Correo o contrase;a invalido"});
     req.session.user = {
         id: user.id,
