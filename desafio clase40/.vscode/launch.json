@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\src\\app.js",
+            "env": {
+                "PORT": "8080",
+                "MONGO_URL": "mongodb+srv://admin:123@cluster0.ikyksqt.mongodb.net/clase38?retryWrites=true&w=majority",
+                "JWT_COOKIE": "Galleta",
+                "JWT_SECRET": "Secretin",
+                "SUPERADMIN_EMAIL": "admin@admin.com",
+                "SUPERADMIN_PASSWORD": "123"
+            }
+        }
+    ]
+}
